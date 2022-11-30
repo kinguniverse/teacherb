@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href ="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Kg Calculation </title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        p{
+            color:black;
+             
+        }
+        #hedding{
+            background-color: aqua;
+            height: 100px;
+        }
+ 
+    </style>
+    
+</head>
+<body>
+
+    <div class="container-fluid" id="hedding">
+     </div>
+
+    <div class="container"> <br><br>
+
+        <p>
+            एक व्यक्ति किसी दुकान में जाता हैं| वह 32 ग्राम सरसों का तेल लेता है और 1kg तेल का मूल्य है 175 रूपए तो उस व्यक्ति को कितने पैसे देने होगे |
+        </p>
+
+        <center>
+      Kg Amount : <input type="text" id="amount" placeholder="Enter Amount"> <br>
+      <br>
+       Gram : <input type="text" name="" id="kg" placeholder="Enter Gram">
+       <h4 id="result"></h4>
+       <button onclick="myfun()">Calculation</button>
+        </center> <br> <br><br>
+
+        <p>
+            दुकानदार 25रु में 350 ग्राम सामान देता है | तो उस सामान का एक kg का मूल्य कितना होगा| 
+        </p>
+        <center>
+            Amount : <input type="text" id="paisa" placeholder="Enter Amount"> <br>
+            <br>
+             Gram : <input type="text" name="" id="gram" placeholder="Enter Gram">
+             <h4 id="total"></h4>
+             <button onclick="ask()">Calculation</button>
+              </center>
+
+        
+    </div>
+
+ 
+
+<!-- ---------------------------------- Script is Start ---------------------------------------------------------------------------------- -->
+    <script>
+        function myfun(){
+            var a=document.getElementById('amount').value;
+            var b = document.getElementById('kg').value;
+            var c = document.getElementById('kg').value;
+            var z = parseInt(a)*parseInt(b)/1000;
+            document.getElementById('result').innerHTML="रू "+z;
+
+        }
+
+        ///////////////////////////////////
+
+        function ask(){
+            var am=document.getElementById('paisa').value;
+            var gram = document.getElementById('gram').value;
+            var total = document.getElementById('total').value;
+
+            var x=parseInt(am)*1000/parseInt(gram);
+            document.getElementById('total').innerHTML=x+" रु kg";
+        }
+    </script>
+</body>
+</html>

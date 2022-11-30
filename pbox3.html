@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pbox3</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ol>
+            <li>        <input type="text"   id="a"> </li>
+            <li>        <input type="text"   id="b"> </li>
+            <li>        <input type="text"   id="c"> </li>
+
+        </ol>
+        <h2 id="result">Result : </h2>
+        <button onclick="myfun()">Addition (+)</button>
+    </div>
+
+    <script>
+        function myfun(){
+            var a = document.getElementById('a').value;
+            var b = document.getElementById('b').value;
+            var c = document.getElementById('c').value;
+            var result = document.getElementById('result').value;
+
+            var d = parseInt(a)+parseInt(b)+parseInt(c);
+            document.getElementById('result').innerHTML="Result : "+d;
+        }
+    </script>
+</body>
+</html>
